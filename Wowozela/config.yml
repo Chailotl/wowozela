@@ -1,0 +1,18 @@
+# What items should represent each instrument
+instruments:
+  bass: NETHER_BRICK
+  snare: BLAZE_ROD
+  hat: STICK
+  bass_drum: LEATHER
+  glockenspiel: GOLD_INGOT
+  flute: SUGAR_CANE
+  chime: QUARTZ
+  guitar: BRICK
+  xylophone: BONE
+  vibraphone: IRON_INGOT
+  cow_bell: FLINT
+  didgeridoo: CLAY_BALL
+  bit: EMERALD
+  banjo: WHEAT
+  electric_piano: GLOWSTONE_DUST
+  harp: FEATHER

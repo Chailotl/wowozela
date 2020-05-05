@@ -1,0 +1,18 @@
+name: Wowozela
+description: Fretless instruments that change pitch depending on your eye pitch
+author: Raus
+main: com.raus.wowozela.Main
+version: 1.0
+api-version: 1.15
+
+commands:
+  wowozela:
+    description: Wowozela
+    default: true
+    usage: "Usage: /wowozela [info|reload]"
+    aliases: wow
+
+permissions:
+  wowozela.reload:
+    default: op
+    description: Allows you to reload the config
