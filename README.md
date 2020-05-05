@@ -13,9 +13,11 @@ You can craft an instrument with a note block and a specific item. (listed in th
 Left click in your main hand or right click in your off hand to play it!
 
 <p align="center">
-  <img src="https://i.imgur.com/3lZmQ0d.png" alt="Wowozela Demo">
+  <img src="https://i.imgur.com/3lZmQ0d.png">
 </p>
-
+<p align="center">
+  <img src="https://i.imgur.com/se4bCjS.png">
+</p>
 
 ## Config
 ```yaml
