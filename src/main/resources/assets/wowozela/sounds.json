@@ -1,0 +1,106 @@
+{
+	"sine": {
+		"sounds": [
+			{
+				"name": "wowozela:sine",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"triangle": {
+		"sounds": [
+			{
+				"name": "wowozela:triangle",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"saw": {
+		"sounds": [
+			{
+				"name": "wowozela:saw",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"square": {
+		"sounds": [
+			{
+				"name": "wowozela:square",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"pulse_25": {
+		"sounds": [
+			{
+				"name": "wowozela:pulse_25",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"pulse_12_5": {
+		"sounds": [
+			{
+				"name": "wowozela:pulse_12_5",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"nes_noise": {
+		"sounds": [
+			{
+				"name": "wowozela:nes_noise",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"meow": {
+		"sounds": [
+			{
+				"name": "wowozela:meow",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"wawa": {
+		"sounds": [
+			{
+				"name": "wowozela:wawa",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"dooooooooh": {
+		"sounds": [
+			{
+				"name": "wowozela:dooooooooh",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"doot": {
+		"sounds": [
+			{
+				"name": "wowozela:doot",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"miku": {
+		"sounds": [
+			{
+				"name": "wowozela:miku",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"prima": {
+		"sounds": [
+			{
+				"name": "wowozela:prima",
+				"attenuation_distance": 48
+			}
+		]
+	}
+}

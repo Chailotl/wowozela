@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"category": "equipment",
+	"key": {
+		"X": {
+			"tag": "minecraft:music_discs"
+		},
+		"#": {
+			"item": "minecraft:amethyst_shard"
+		}
+	},
+	"pattern": [
+		" # ",
+		"#X#",
+		" # "
+	],
+	"result": {
+		"item": "wowozela:wowozela"
+	}
+}
