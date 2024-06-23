@@ -3,7 +3,7 @@
 	"category": "equipment",
 	"key": {
 		"X": {
-			"tag": "minecraft:music_discs"
+			"tag": "c:music_discs"
 		},
 		"#": {
 			"item": "minecraft:amethyst_shard"
@@ -15,6 +15,7 @@
 		" # "
 	],
 	"result": {
-		"item": "wowozela:wowozela"
+		"count": 1,
+		"id": "wowozela:wowozela"
 	}
 }
