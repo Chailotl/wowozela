@@ -19,9 +19,7 @@ public class WowozelaScreen extends Screen
 	@Override
 	protected void init()
 	{
-		var widget = new InstrumentListWidget();
-		widget.setSelected(widget.children().stream().filter(entry -> entry.instrument.id == ClientMain.localInstrument).findFirst().orElse(null));
-		addDrawableChild(widget);
+		addDrawableChild(new InstrumentListWidget());
 	}
 
 	@Override
@@ -49,6 +47,11 @@ public class WowozelaScreen extends Screen
 			);
 
 			Sounds.instruments.forEach(instrument -> addEntry(new InstrumentItem(instrument)));
+
+			children().stream().filter(entry -> entry.instrument.id == ClientMain.localInstrument).findFirst().ifPresent(entry -> {
+				setSelected(entry);
+				centerScrollOn(entry);
+			});
 		}
 	}
 

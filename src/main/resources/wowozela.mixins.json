@@ -3,6 +3,7 @@
 	"package": "com.chailotl.wowozela.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
+		"InjectLivingEntity"
 	],
 	"injectors": {
 		"defaultRequire": 1
@@ -11,7 +12,7 @@
 		"AccessorSoundManager",
 		"AccessorSoundSystem",
 		"AccessorStaticSound",
-		"InjectSoundSystem",
-		"InjectClientPlayerEntity"
+		"InjectClientPlayerEntity",
+		"InjectSoundSystem"
 	]
 }

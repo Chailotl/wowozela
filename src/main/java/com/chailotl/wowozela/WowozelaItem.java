@@ -49,37 +49,26 @@ public class WowozelaItem extends Item
 	@Override
 	public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand)
 	{
-		if (user.isSneaking())
+		if (world.isClient)
 		{
-			if (world.isClient())
+			if (ClientMain.isLocalPlayer(user))
 			{
-				ClientMain.openWowozelaScreen();
+				ClientMain.addWowozela(user, ClientMain.localInstrument);
 			}
-			return TypedActionResult.success(user.getStackInHand(hand));
 		}
 		else
 		{
-			if (world.isClient)
-			{
-				if (ClientMain.isLocalPlayer(user))
-				{
-					ClientMain.addWowozela(user, ClientMain.localInstrument);
-				}
-			}
-			else
-			{
-				UUID uuid = user.getUuid();
-				Identifier id = Main.instrumentIndices.getOrDefault(uuid, Sounds.SINE.getId());
-				var payload = new Main.StartWowozelaPayload(uuid, id);
+			UUID uuid = user.getUuid();
+			Identifier id = Main.instrumentIndices.getOrDefault(uuid, Sounds.SINE.getId());
+			var payload = new Main.StartWowozelaPayload(uuid, id);
 
-				PlayerLookup.all(world.getServer()).forEach(player ->
+			PlayerLookup.all(world.getServer()).forEach(player ->
+			{
+				if (!player.equals(user))
 				{
-					if (!player.equals(user))
-					{
-						ServerPlayNetworking.send(player, payload);
-					}
-				});
-			}
+					ServerPlayNetworking.send(player, payload);
+				}
+			});
 		}
 
 		return ItemUsage.consumeHeldItem(world, user, hand);

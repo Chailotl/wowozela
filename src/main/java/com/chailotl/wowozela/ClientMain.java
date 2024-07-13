@@ -4,20 +4,25 @@ import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
+import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleManager;
+import net.minecraft.client.util.InputUtil;
 import net.minecraft.client.util.Window;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.text.Text;
 import net.minecraft.util.Colors;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.Vec3d;
+import org.lwjgl.glfw.GLFW;
 
 import java.awt.*;
 import java.util.*;
@@ -41,10 +46,31 @@ public class ClientMain implements ClientModInitializer
 
 	public static Identifier localInstrument = Sounds.SINE.getId();
 
+	private static KeyBinding changeInstrumentKeyBind;
+
 	@Override
 	public void onInitializeClient()
 	{
 		ParticleFactoryRegistry.getInstance().register(Main.DOT, DotParticle.Factory::new);
+
+		changeInstrumentKeyBind = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+			"key.wowozela.changeInstrument",
+			InputUtil.Type.KEYSYM,
+			GLFW.GLFW_KEY_R,
+			"category.wowozela.wowozela"
+		));
+
+		ClientTickEvents.END_CLIENT_TICK.register(client -> {
+			while (changeInstrumentKeyBind.wasPressed())
+			{
+				if (client.player == null) { return; }
+
+				if (StreamSupport.stream(client.player.getHandItems().spliterator(), false).anyMatch(item -> item.isOf(Main.WOWOZELA)))
+				{
+					openWowozelaScreen();
+				}
+			}
+		});
 
 		ClientPlayNetworking.registerGlobalReceiver(Main.StartWowozelaPayload.ID, (payload, context) -> {
 			ClientWorld world = context.client().world;

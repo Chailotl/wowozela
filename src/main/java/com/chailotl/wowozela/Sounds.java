@@ -28,6 +28,23 @@ public class Sounds
 	public static final SoundEvent MIKU = registerSoundEvent("miku");
 	public static final SoundEvent PRIMA = registerSoundEvent("prima");
 
+	public static final SoundEvent BASEDRUM = registerSoundEvent("basedrum");
+	public static final SoundEvent BASS = registerSoundEvent("bass");
+	public static final SoundEvent BELL = registerSoundEvent("bell");
+	public static final SoundEvent CHIME = registerSoundEvent("chime");
+	public static final SoundEvent FLUTE = registerSoundEvent("flute");
+	public static final SoundEvent GUITAR = registerSoundEvent("guitar");
+	public static final SoundEvent HARP = registerSoundEvent("harp");
+	public static final SoundEvent HAT = registerSoundEvent("hat");
+	public static final SoundEvent PLING = registerSoundEvent("pling");
+	public static final SoundEvent SNARE = registerSoundEvent("snare");
+	public static final SoundEvent XYLOPHONE = registerSoundEvent("xylophone");
+	public static final SoundEvent IRON_XYLOPHONE = registerSoundEvent("iron_xylophone");
+	public static final SoundEvent COW_BELL = registerSoundEvent("cow_bell");
+	public static final SoundEvent DIDGERIDOO = registerSoundEvent("didgeridoo");
+	public static final SoundEvent BIT = registerSoundEvent("bit");
+	public static final SoundEvent BANJO = registerSoundEvent("banjo");
+
 	public static List<Instrument> instruments = Arrays.asList(
 		new Instrument("Sine wave", SINE).volume(0.25f).interruptible(),
 		new Instrument("Triangle wave", TRIANGLE).volume(0.25f).interruptible(),
@@ -42,22 +59,22 @@ public class Sounds
 		new Instrument("Doot", DOOT).volume(0.375f),
 		new Instrument("Miku", MIKU).volume(0.375f).interruptible().looping(58202, 88193),
 		new Instrument("Prima", PRIMA).volume(0.5f).interruptible().looping(62587, 83063),
-		new Instrument("Bass", SoundEvents.BLOCK_NOTE_BLOCK_BASS.value()),
-		new Instrument("Snare Drum", SoundEvents.BLOCK_NOTE_BLOCK_SNARE.value()),
-		new Instrument("Hi-hat", SoundEvents.BLOCK_NOTE_BLOCK_HAT.value()),
-		new Instrument("Kick Drum", SoundEvents.BLOCK_NOTE_BLOCK_BASEDRUM.value()),
-		new Instrument("Glockenspiel", SoundEvents.BLOCK_NOTE_BLOCK_BELL.value()),
-		new Instrument("Flute", SoundEvents.BLOCK_NOTE_BLOCK_FLUTE.value()),
-		new Instrument("Chimes", SoundEvents.BLOCK_NOTE_BLOCK_CHIME.value()),
-		new Instrument("Guitar", SoundEvents.BLOCK_NOTE_BLOCK_GUITAR.value()),
-		new Instrument("Xylophone", SoundEvents.BLOCK_NOTE_BLOCK_XYLOPHONE.value()),
-		new Instrument("Vibraphone", SoundEvents.BLOCK_NOTE_BLOCK_IRON_XYLOPHONE.value()),
-		new Instrument("Cow Bell", SoundEvents.BLOCK_NOTE_BLOCK_COW_BELL.value()),
-		new Instrument("Didgeridoo", SoundEvents.BLOCK_NOTE_BLOCK_DIDGERIDOO.value()),
-		new Instrument("Synthesizer", SoundEvents.BLOCK_NOTE_BLOCK_BIT.value()),
-		new Instrument("Banjo", SoundEvents.BLOCK_NOTE_BLOCK_BANJO.value()),
-		new Instrument("Electric Piano", SoundEvents.BLOCK_NOTE_BLOCK_PLING.value()),
-		new Instrument("Harp", SoundEvents.BLOCK_NOTE_BLOCK_HARP.value())
+		new Instrument("Bass", BASS),
+		new Instrument("Snare Drum", SNARE),
+		new Instrument("Hi-hat", HAT),
+		new Instrument("Kick Drum", BASEDRUM),
+		new Instrument("Glockenspiel", BELL),
+		new Instrument("Flute", FLUTE),
+		new Instrument("Chimes", CHIME),
+		new Instrument("Guitar", GUITAR),
+		new Instrument("Xylophone", XYLOPHONE),
+		new Instrument("Vibraphone", IRON_XYLOPHONE),
+		new Instrument("Cow Bell", COW_BELL),
+		new Instrument("Didgeridoo", DIDGERIDOO),
+		new Instrument("Synthesizer", BIT),
+		new Instrument("Banjo", BANJO),
+		new Instrument("Electric Piano", PLING),
+		new Instrument("Harp", HARP)
 	);
 
 	public static Map<Identifier, Instrument> instrumentMap = new HashMap<>();

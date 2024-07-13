@@ -102,5 +102,133 @@
 				"attenuation_distance": 48
 			}
 		]
+	},
+	"basedrum": {
+		"sounds": [
+			{
+				"name": "minecraft:note/bd",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"bass": {
+		"sounds": [
+			{
+				"name": "minecraft:note/bass",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"bell": {
+		"sounds": [
+			{
+				"name": "minecraft:note/bell",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"chime": {
+		"sounds": [
+			{
+				"name": "minecraft:note/icechime",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"flute": {
+		"sounds": [
+			{
+				"name": "minecraft:note/flute",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"guitar": {
+		"sounds": [
+			{
+				"name": "minecraft:note/guitar",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"harp": {
+		"sounds": [
+			{
+				"name": "minecraft:note/harp",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"hat": {
+		"sounds": [
+			{
+				"name": "minecraft:note/hat",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"pling": {
+		"sounds": [
+			{
+				"name": "minecraft:note/pling",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"snare": {
+		"sounds": [
+			{
+				"name": "minecraft:note/snare",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"xylophone": {
+		"sounds": [
+			{
+				"name": "minecraft:note/xylobone",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"iron_xylophone": {
+		"sounds": [
+			{
+				"name": "minecraft:note/iron_xylophone",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"cow_bell": {
+		"sounds": [
+			{
+				"name": "minecraft:note/cow_bell",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"didgeridoo": {
+		"sounds": [
+			{
+				"name": "minecraft:note/didgeridoo",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"bit": {
+		"sounds": [
+			{
+				"name": "minecraft:note/bit",
+				"attenuation_distance": 48
+			}
+		]
+	},
+	"banjo": {
+		"sounds": [
+			{
+				"name": "minecraft:note/banjo",
+				"attenuation_distance": 48
+			}
+		]
 	}
 }
