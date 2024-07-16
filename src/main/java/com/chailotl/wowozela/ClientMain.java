@@ -117,8 +117,10 @@ public class ClientMain implements ClientModInitializer
 
 				// If a wowozela is switched away from while being played onStoppedUsing() isn't run!!
 				// So we need to catch this ourselves :/
-				if (StreamSupport.stream(player.getHandItems().spliterator(), false).noneMatch(item -> item.isOf(Main.WOWOZELA)) ||
-					!player.isAlive())
+				// Also catch if player dies or disconnects
+				if (client.world.getPlayerByUuid(player.getUuid()) == null ||
+					!player.isAlive() ||
+					StreamSupport.stream(player.getHandItems().spliterator(), false).noneMatch(item -> item.isOf(Main.WOWOZELA)))
 				{
 					toRemove.add(wowozela.player);
 				}
