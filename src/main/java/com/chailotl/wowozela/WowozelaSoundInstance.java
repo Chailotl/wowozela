@@ -17,7 +17,7 @@ public class WowozelaSoundInstance extends MovingSoundInstance
 
 	protected WowozelaSoundInstance(PlayerEntity player, Identifier id)
 	{
-		super(Sounds.instrumentMap.get(id).sound, SoundCategory.RECORDS, SoundInstance.createRandom());
+		super(Sounds.instrumentMap.get(id).sound, SoundCategory.PLAYERS, SoundInstance.createRandom());
 		instrument = Sounds.instrumentMap.get(id);
 		repeat = true;
 		repeatDelay = 0;
