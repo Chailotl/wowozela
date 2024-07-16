@@ -115,12 +115,10 @@ public class ClientMain implements ClientModInitializer
 
 				wowozela.updatePrevValues();
 
-				// If a wowozela is switched away from while being played onStoppedUsing() isn't run!!
-				// So we need to catch this ourselves :/
-				// Also catch if player dies or disconnects
+				// Catch if player doesn't exists (disconnected), died, or isn't using the wowozela
 				if (client.world.getPlayerByUuid(player.getUuid()) == null ||
 					!player.isAlive() ||
-					StreamSupport.stream(player.getHandItems().spliterator(), false).noneMatch(item -> item.isOf(Main.WOWOZELA)))
+					!player.getStackInHand(player.getActiveHand()).isOf(Main.WOWOZELA))
 				{
 					toRemove.add(wowozela.player);
 				}
