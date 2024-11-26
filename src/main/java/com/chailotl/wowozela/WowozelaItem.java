@@ -43,7 +43,6 @@ public class WowozelaItem extends Item
 	@Override
 	public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type)
 	{
-
 		tooltip.add(Text.literal("Press [").formatted(Formatting.DARK_GRAY)
 			.append(Text.keybind("key.wowozela.changeInstrument").formatted(Formatting.GRAY))
 			.append(Text.literal("] to change instrument").formatted(Formatting.DARK_GRAY)));
